@@ -126,6 +126,10 @@ header {
   margin-bottom: 200px;
 }
 
+header * {
+  z-index: 1;
+}
+
 header::after {
   content: "";
   background-image: url("/images/bg-pattern-intro-right-desktop.svg");
@@ -135,7 +139,8 @@ header::after {
   top: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 50%;
+  z-index: 2;
 }
 
 header::before {
@@ -148,6 +153,7 @@ header::before {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
 
 .ivan {
@@ -164,22 +170,12 @@ header::before {
 .bg-violet {
   margin: 60px auto;
   background-color: var(--dark-violet);
-  color: #fff;
-  padding: 70px;
-  position: relative;
-}
-
-.bg-violet::before {
-  content: "";
   background-image: url("/images/bg-pattern-how-we-work-desktop.svg");
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 40% 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  background-size: 50% 100%;
+  color: #fff;
+  padding: 70px;
 }
 
 .tiles {
@@ -189,21 +185,11 @@ header::before {
 /* Footer styling */
 footer {
   background-color: var(--very-light-gray);
-  padding: 50px;
-  position: relative;
-}
-
-footer::before {
-  content: "";
   background-image: url("/images/bg-pattern-footer-desktop.svg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 30%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  padding: 50px;
 }
 
 footer h4 {
