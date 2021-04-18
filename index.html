@@ -13,6 +13,9 @@
     />
 
     <link rel="stylesheet" href="styles.css"/>
+    
+<!-- script toggle-->
+    <script src="./script.js" defer></script>
 
     <title>Frontend Mentor | Insure landing page</title>
 
@@ -34,16 +37,20 @@
     <nav>
       <div class="container">
         <div class="flex">
-          <div>
+          <div class="img-wrapper">
             <img src="./images/logo.svg" alt="logo" />  
           </div>
+
 <!-- mobile-size hamburger btn section-->
-          <button>
-            <img src="./images/icon-hamburger.svg" alt="icon-hamburger" />
+<!-- pay attention to the btn class this is where there is a toggle "class hamburger"
+I also hide it from the desktop-version -->
+          <button class="hamburger" id="hamburger">
+            <img class="open" src="./images/icon-hamburger.svg" alt="icon-hamburger" />
+            <img class="close" src="./images/icon-close.svg" alt="icon-close" />
           </button>
 
 
-          <ul>
+          <ul id="menu">
             <li><a href="#weare">How we work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Account</a></li>

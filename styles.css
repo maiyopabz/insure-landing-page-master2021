@@ -104,9 +104,25 @@ p {
 /* Nav styling */
 nav {
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  background-color: #fff;
+}
+
+/* class hamburger this is where i hide it */
+nav .hamburger {
+  display: none;
+}
+
+nav .hamburger:focus {
+  outline: none;
 }
 
 nav ul {
+  align-items: center;
   display: flex;
   list-style-type: none;
   padding: 0;
@@ -253,6 +269,70 @@ footer li a {
 
   .flex {
     flex-direction: column;
+  }
+
+  nav {
+    padding: 20px 0;
+  }
+
+  /* this is where the nav setup mobile shows */
+  nav .hamburger {
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  nav .hamburger .close {
+    display: none;
+  }
+
+  nav .hamburger.show .open {
+    display: none;
+  }
+
+  nav .hamburger.show .close {
+    display: block;
+  }
+
+  nav .flex {
+    flex-direction: row;
+  }
+
+  nav .img-wrapper {
+    text-align: left;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /*this is where the nav toggle settings are .*/
+  nav ul.show {
+    background-color: var(--very-dark-violet);
+    position: fixed;
+    padding-top: 40px;
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    height: calc(100vh - 70px);
+    width: 100vw;
+    top: 70px;
+    left: 0;
+    z-index: 100;
+  }
+
+  nav ul a {
+    color: #fff;
+  }
+
+  nav ul li {
+    margin: 30px 0;
+  }
+
+  .btn-reverse {
+    border-color: #fff;
+    color: #fff;
   }
 
   .ivan {
